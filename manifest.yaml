@@ -1,0 +1,53 @@
+version: 0.0.1
+type: plugin
+author: huangqy
+name: markdown_to_pdf_a5
+label:
+  en_US: markdown_to_pdf_a5
+  ja_JP: markdown_to_pdf_a5
+  zh_Hans: markdown_to_pdf_a5
+  pt_BR: markdown_to_pdf_a5
+description:
+  en_US: A tool to convert markdown to PDF with customizable A5 page size
+  ja_JP: A tool to convert markdown to PDF with customizable A5 page size
+  zh_Hans: A tool to convert markdown to PDF with customizable A5 page size
+  pt_BR: A tool to convert markdown to PDF with customizable A5 page size
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+    model:
+      enabled: false
+      llm: false
+      text_embedding: false
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+    node:
+      enabled: false
+    endpoint:
+      enabled: false
+    app:
+      enabled: false
+    storage:
+      enabled: false
+      size: 0
+plugins:
+  tools:
+    - provider/markdown_to_pdf_a5.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2025-05-27T10:54:54.9815978+08:00
+privacy: PRIVACY.md
+verified: false
